@@ -1,9 +1,4 @@
-import cv2
-import numpy as np
-import math
-import time
-
-import color_palette
+libraries to be installed and import
 
 # GLOBAL ATTRIBUTES DECLARATION BEGIN000
 
