@@ -1,10 +1,3 @@
-libraries to be installed and import
-
-# GLOBAL ATTRIBUTES DECLARATION BEGIN000
-
-# Initializing the Background Image
-bg = None
-
 # Weight for Running Average for Background Image
 image_weight = 0.5
 
@@ -25,18 +18,7 @@ fingertip_prev_trace = fingertip_current_trace
 prevPoint = None                                                            
 
 # Colors [Format: BGR]
-color_blue      = (255, 0, 0)
-color_green     = (0, 255, 0)
-color_red       = (0, 0, 255)
-color_yellow    = (0, 255, 255)
-color_orange    = (0, 165, 255)
-color_magenta   = (255, 0, 255)
-color_black     = (0, 0, 0)
-color_cyan      = (255, 255, 0)
-color_brown     = (19, 69, 139)
-color_white     = (255, 255, 255)
-color_purple    = (153, 0, 153)
-color_olive     = (0, 128, 128)
+Color giving to the pallete
 
 picked_color = color_black       #preselected color
 prev_color = None               
@@ -169,20 +151,8 @@ def main():
         clone, region_of_trace, gray = preprocess_frame(camera)
 
         # Creating the Color Palette
-        create_color_palette(clone, color_blue, (palette_left, palette_top))
-        create_color_palette(clone, color_green, (palette_left+30, palette_top))
-        create_color_palette(clone, color_red, (palette_left+60, palette_top))
-        create_color_palette(clone, color_yellow, (palette_left+90, palette_top))
-        create_color_palette(clone, color_orange, (palette_left+120, palette_top))
-        create_color_palette(clone, color_magenta, (palette_left+150, palette_top))
-
-        create_color_palette(clone, color_black, (palette_left, palette_top+30))
-        create_color_palette(clone, color_cyan, (palette_left+30, palette_top+30))
-        create_color_palette(clone, color_brown, (palette_left+60, palette_top+30))
-        create_color_palette(clone, color_white, (palette_left+90, palette_top+30))
-        create_color_palette(clone, color_purple, (palette_left+120, palette_top+30))
-        create_color_palette(clone, color_olive, (palette_left+150, palette_top+30))
-
+        
+        
         # Watching for Key-Press by user
         keypress = cv2.waitKey(1) & 0xFF
 
